@@ -34,5 +34,7 @@ jobs:
             sudo apt-get install -y apache2
             sudo systemctl start apache2
             sudo systemctl enable apache2
-            cd home
-            sudo mv * /var/www/html
+            cd /home/ubuntu/your-repo-dir  # Update to your actual repo directory
+            sudo rm -rf /var/www/html/assets
+            sudo mv assets /var/www/html/
+
