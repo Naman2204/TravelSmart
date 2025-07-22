@@ -36,3 +36,10 @@ jobs:
             sudo systemctl enable apache2
             cd home
             sudo mv * /var/www/html
+            # Remove the file if it exists
+            if [ -f /var/www/html/assets ]; then
+                rm /var/www/html/assets
+            fi
+            
+            # Now move the directory
+            mv assets /var/www/html/assets
